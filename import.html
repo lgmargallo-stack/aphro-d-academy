@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aphro-D Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background-color:#000000;
+ background-image:url("assets/images/backgrounds/TOP-3.png");
+ background-position:top center;background-size:100% auto;background-repeat:no-repeat;
+ color:#ffffff;font-family:Roboto,Arial,sans-serif;font-size:16px;line-height:22.4px}
+img{max-width:100%;display:block;border:0}
+ul{list-style:none;margin:0;padding:0}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{width:100%;max-width:1056px;margin:0 auto;padding:0 24px}
+.section{padding-top:150px;padding-bottom:150px}
+.title{font-size:40px;line-height:51px;letter-spacing:6px;text-transform:uppercase;text-align:center;color:#ffffff}
+.title-sm{font-size:37px}
+.btn{display:inline-block;font-family:Archivo,Roboto,sans-serif;font-size:18px;letter-spacing:2px;
+ text-transform:uppercase;text-decoration:none;color:#ffffff;white-space:nowrap;
+ background-image:linear-gradient(90deg,#ff9900 0%,#9d5e00 100%);
+ border-radius:8px;padding:20px 28px;line-height:20px}
+.btn-lg{padding:37px 28px;min-width:443px;text-align:center}
+.rule{display:block;width:64px;height:6px;background:#ff9900;margin-bottom:24px}
+
+.hero{padding:96px 0;text-align:center}
+.hero h1{font-size:50px;line-height:70px;letter-spacing:14px;font-weight:700;text-transform:uppercase}
+.hero .sub{font-weight:700;font-size:18px;margin-top:8px}
+.hero .tag{color:#a3a3a3;margin-top:6px}
+.hero .media{margin-top:40px;height:594px;background:#151515;border-radius:8px}
+.hero .kicker{color:#ff9900;font-size:20px;letter-spacing:6px;text-transform:uppercase;margin-top:48px}
+.hero .copy{color:#a3a3a3;max-width:520px;margin:12px auto 0}
+.hero .cta{margin-top:32px}
+
+.benefits{display:flex;flex-wrap:wrap;justify-content:center;gap:37px;margin-top:56px}
+.benefit{width:282px;min-height:250px;border-radius:12px;padding:32px 20px 28px;text-align:center;
+ background-image:linear-gradient(145deg,#3a3532 0%,#1a1a1a 100%)}
+.benefit img{width:108px;height:108px;margin:0 auto 20px}
+.benefit span{font-weight:700;font-size:15px;line-height:21px}
+
+.cmp-scroll{overflow-x:auto;margin-top:56px}
+table.cmp{width:100%;min-width:1040px;border-collapse:collapse;text-align:center;table-layout:fixed}
+table.cmp th.lab{width:380px;text-align:left;font-weight:400;font-size:14px;padding:14px 16px 14px 0;
+ border-bottom:1px solid #2a2a2a;color:#ffffff}
+table.cmp th.col{width:165px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+ font-weight:400;padding:20px 12px;vertical-align:bottom;color:#ffffff}
+table.cmp th.hi,table.cmp td.hi{background:#12330d}
+table.cmp td{width:165px;padding:10px 12px}
+.pill{display:block;max-width:118px;height:30px;margin:0 auto;border-radius:6px;
+ background-color:#f2fbf3;text-align:center;line-height:30px;font-size:18px;font-weight:700}
+.pill.y{color:#4eb641}
+.pill.n{color:#ff0000}
+
+.split{position:relative;max-width:1290px;margin:0 auto 40px}
+.split .media{margin-left:0}
+.split .txt{position:absolute;left:0;width:400px;max-width:42%;z-index:2}
+.split .txt h3{font-size:32px;line-height:40px;letter-spacing:4px;text-transform:uppercase;font-weight:700}
+.split .txt p{color:#a3a3a3;margin-top:20px}
+
+.courses{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:56px}
+.courses img{width:379px;height:213px;border-radius:4px}
+
+.band-lower{background-image:url("assets/images/backgrounds/2-51.png");
+ background-position:top center;background-size:100% auto;background-repeat:no-repeat}
+
+.quotes{max-width:760px;margin:56px auto 0}
+.quote{text-align:center;padding-bottom:56px}
+.quote .av{width:50px;height:50px;border-radius:50%;margin:0 auto 10px}
+.quote .nm{font-size:18px;line-height:25.2px;letter-spacing:.7px;margin-bottom:10px}
+.quote .st{width:161px;height:30px;margin:0 auto 22px}
+.quote .tx{font-size:18px;line-height:25.2px;letter-spacing:.7px;max-width:720px;margin:0 auto}
+
+.plans{display:flex;flex-wrap:wrap;justify-content:center;gap:19px;margin-top:56px}
+.plan{width:403px;min-height:493px;background:#151515;border:1px solid #ff9900;
+ border-radius:8px;padding:50px 24px 0;text-align:center}
+.plan .k{color:#ff9900;font-size:20px;letter-spacing:6px;line-height:36px;text-transform:uppercase}
+.plan .t{font-size:36px;line-height:35px;margin-top:12px}
+.plan .tm{font-size:20px;letter-spacing:6px;line-height:36px;text-transform:uppercase;margin-top:42px}
+.plan .was{color:#ff0000;text-decoration:line-through;font-size:20px;line-height:45px;margin-top:17px}
+.plan .pr{font-size:47px;font-weight:700;line-height:45px;color:#e5e5e5;margin-top:16px}
+.plan .cta{display:inline-block;margin-top:51px;width:262px;padding:20px 0;font-family:Roboto,Arial,sans-serif;
+ font-weight:500;font-size:18px;letter-spacing:1px}
+
+.faq{margin-top:56px}
+.faq details{border-bottom:1px solid #2a2a2a}
+.faq summary{list-style:none;cursor:pointer;font-size:20px;line-height:40px;padding:5px 0;
+ display:flex;justify-content:space-between;align-items:center;gap:24px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:#ffffff}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{color:#a3a3a3;padding-bottom:20px;max-width:74ch}
+
+.footer{padding:40px 0 56px}
+.frow{max-width:1305px;margin:0 auto;padding:40px 24px 0;display:flex;align-items:center;
+ justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2a2a2a}
+.fbrand{display:flex;align-items:center;gap:14px}
+.fbrand img.s{width:20px;height:20px}
+.fcopy{color:#a3a3a3;font-size:16px;white-space:nowrap}
+.fmem{display:inline-block;width:149px;height:45px;line-height:43px;text-align:center;font-size:13px;
+ letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:#ffffff;
+ border:1px solid #ff9900;border-radius:5px}
+.flink{font-size:16px;text-decoration:none;color:#a3a3a3;white-space:nowrap}
+
+@media (max-width:1100px){
+ .split .txt{position:static;width:auto;max-width:none}
+ .split .media{width:100%!important;margin-left:0!important;margin-top:24px}
+ .hero h1{font-size:32px;line-height:44px;letter-spacing:6px}
+ .hero .media{height:240px}
+ .btn-lg{min-width:0;width:100%}
+ .frow{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Aphro-D Academy</h1>
+    <p class="sub">Sculpting Success by Redefining Fitness</p>
+    <p class="tag">Affordable to all, taught by the best.</p>
+    <div class="media"></div>
+    <p class="kicker">Dynamic Enroll Now</p>
+    <p class="copy">Enroll now and gain full access to all current and future Aphro-D Academy courses launching monthly.</p>
+    <p class="cta"><a class="btn btn-lg" href="#pricing">Join Aphro-D Academy</a></p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title">What You Will Get</h2>
+    <div class="benefits">
+<div class="benefit"><img src="assets/images/icons/easy-to-follow-courses.png" alt="" width="108" height="108"><span>Easy-to-follow courses</span></div>
+<div class="benefit"><img src="assets/images/icons/custom-workout-plan.png" alt="" width="108" height="108"><span>Your Own Custom Workout Plan</span></div>
+<div class="benefit"><img src="assets/images/icons/live-support-feedback.png" alt="" width="108" height="108"><span>Live Support and Feedback</span></div>
+<div class="benefit"><img src="assets/images/icons/expert-fitness-coaches.png" alt="" width="108" height="108"><span>Expert Fitness Coaches</span></div>
+<div class="benefit"><img src="assets/images/icons/supportive-community.png" alt="" width="108" height="108"><span>Supportive Community</span></div>
+<div class="benefit"><img src="assets/images/icons/lifelong-benefits.png" alt="" width="108" height="108"><span>Lifelong Benefits</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title">Why Aphro-D Academy<br>is the best choice for you</h2>
+    <div class="cmp-scroll">
+      <table class="cmp">
+        <tr><td></td><th class="col hi">Aphro-D Academy</th><th class="col">Private Coaching</th>
+            <th class="col">YouTube</th><th class="col">Netflix</th></tr>
+<tr><th class="lab">Unfiltered Content</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+<tr><th class="lab">Science-Backed Fitness Protocols</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+<tr><th class="lab">Actionable, Results-focused Programs</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+<tr><th class="lab">Lower Cost with Huge Benefits</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+<tr><th class="lab">Online Community</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+<tr><th class="lab">24/7 Access &amp; Support</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill y">&#10003;</span></td><td class=""><span class="pill y">&#10003;</span></td></tr>
+<tr><th class="lab">Free 30-Day Trial</th><td class="hi"><span class="pill y">&#10003;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td><td class=""><span class="pill n">&#10007;</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+<div class="split">
+  <div class="txt" style="top:17%"><span class="rule"></span>
+    <h3>Watch<br>Anytime.<br>Anywhere.</h3><p>Learn at the pace you choose and speed up course content if you prefer. Listen to courses anytime.</p></div>
+  <div class="media" style="width:99%;margin-left:0%">
+    <img src="assets/images/sections/watch-anytime-anywhere.png" alt=""></div>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title title-sm">Explore Our Library of<br>World-Class Courses</h2>
+    <div class="courses">
+<img src="assets/images/courses/01-six-pack-shortcuts.png" alt="Six-Pack Shortcuts" width="379" height="213">
+<img src="assets/images/courses/02-5-minute-anabolic-meals.png" alt="5-Minute Anabolic Meals" width="379" height="213">
+<img src="assets/images/courses/03-home-workout-accelerator.png" alt="Home Workout Accelerator" width="379" height="213">
+<img src="assets/images/courses/04-the-billionaire-code.png" alt="The Billionaire Code" width="379" height="213">
+<img src="assets/images/courses/05-science-of-changing-habits.png" alt="The Science of Changing Habits" width="379" height="213">
+<img src="assets/images/courses/06-bedroom-rockstar.png" alt="Bedroom Rockstar" width="379" height="213">
+<img src="assets/images/courses/07-anabolic-hormone-optimization.png" alt="Anabolic Hormone Optimization" width="379" height="213">
+<img src="assets/images/courses/08-the-truth-about-diets.png" alt="The Truth About Diets" width="379" height="213">
+<img src="assets/images/courses/09-staying-6-pack-lean.png" alt="Staying 6-Pack Lean Daily Routines" width="379" height="213">
+<img src="assets/images/courses/10-neurotoxins-androgen-disruptors.png" alt="Neurotoxins and Androgen Disruptors" width="379" height="213">
+<img src="assets/images/courses/11-fake-health-foods.png" alt="Fake Health Foods" width="379" height="213">
+<img src="assets/images/courses/12-build-muscle-easy-mode.png" alt="How to Build Muscle on Easy Mode" width="379" height="213">
+<img src="assets/images/courses/13-perfect-sleep-system.png" alt="Perfect Sleep System" width="379" height="213">
+<img src="assets/images/courses/14-natural-remedies-longevity.png" alt="Natural Remedies for Longevity" width="379" height="213">
+<img src="assets/images/courses/15-gut-health-secrets.png" alt="Gut Health Secrets" width="379" height="213">
+    </div>
+    <p style="text-align:center;margin-top:56px"><a class="btn btn-lg" href="#pricing">Join Aphro-D Academy</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title title-sm" style="margin-bottom:56px">How Does Aphro-D Academy<br>Builds You For Success</h2>
+<div class="split">
+  <div class="txt" style="top:12%"><span class="rule"></span>
+    <h3>Science-Based<br>Learning</h3><p>Explore cutting-edge, science-backed insights into fitness and men's health from health experts.</p></div>
+  <div class="media" style="width:92%;margin-left:8%">
+    <img src="assets/images/sections/science-based-learning.png" alt=""></div>
+</div>
+<div class="split">
+  <div class="txt" style="top:9%"><span class="rule"></span>
+    <h3>Action and Results<br>Training Modules</h3><p>Access customized training modules designed for you, whether your goal is to lose weight, build muscle, and deepen your understanding in your overall health.</p></div>
+  <div class="media" style="width:80%;margin-left:20%">
+    <img src="assets/images/sections/training-modules.png" alt=""></div>
+</div>
+<div class="split">
+  <div class="txt" style="top:8%"><span class="rule"></span>
+    <h3>Live Feedback<br>and Mentoring</h3><p>Get all your questions answered and get feedback based on your personal situation.</p></div>
+  <div class="media" style="width:89%;margin-left:11%">
+    <img src="assets/images/sections/live-feedback.png" alt=""></div>
+</div>
+<div class="split">
+  <div class="txt" style="top:13%"><span class="rule"></span>
+    <h3>Community<br>&amp; Support</h3><p>Be surrounded by community members who have similar goals and are on the same journey as you.</p></div>
+  <div class="media" style="width:86%;margin-left:14%">
+    <img src="assets/images/sections/community-support.png" alt=""></div>
+</div>
+  </div>
+</section>
+
+<div class="band-lower">
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title">What Our Members Say</h2>
+    <p style="text-align:center;color:#a3a3a3;margin-top:12px">Discover how our courses have transformed their lives</p>
+    <div class="quotes">
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-1.png" alt="" width="50" height="50">
+  <p class="nm">Charles Travers</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">Aphro-D Academy has a wealth of knowledge when it comes to Health &amp; Fitness. They provide a proven system and exercise program to help increase muscle mass and work on optimizing my t-levels. Highly recommended.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-2.png" alt="" width="50" height="50">
+  <p class="nm">Nicholas Holt</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">The Aphro-D Academy courses take into account food, fitness, and lifestyle. This system made dieting and training easy for me to understand.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-3.png" alt="" width="50" height="50">
+  <p class="nm">Rudy Lee</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">The Aphro-D Academy has completely transformed my life in the sense that it has taught me how to live, maintain muscle, and optimize my testosterone.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-4.png" alt="" width="50" height="50">
+  <p class="nm">Devin Young</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">Aphro-D Academy knows the scientific process of being healthier and stronger, with a focus on maintaining high testosterone levels throughout.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-5.png" alt="" width="50" height="50">
+  <p class="nm">Pedro Mendoza</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">Aphro-D Academy has the best courses on how to increase your testosterone levels. I&#x27;m 60 years old, I lost 40lbs with the Academy&#x27;s advice and gained more muscle. Thank you guys.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-6.png" alt="" width="50" height="50">
+  <p class="nm">David Charles</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">I&#x27;m now 57 years old and I&#x27;ve been following Aphro-D Academy&#x27;s advice since I started. Go hard or go home. Love this group platform.</p>
+</div>
+<div class="quote">
+  <img class="av" src="assets/images/avatars/avatar-7.png" alt="" width="50" height="50">
+  <p class="nm">Thomas Duty</p>
+  <img class="st" src="assets/images/social/reviews-badge-161x30.png" alt="5 out of 5 stars" width="161" height="30">
+  <p class="tx">I cannot tell you how thankful I am for the courses on Aphro-D Academy. I&#x27;m 51, I have more focus, and I seem to be more laid back when the unexpected happens. I changed up my vitamins too because of their expert advice.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap" style="max-width:1313px">
+    <h2 class="title">Pricing</h2>
+    <div class="plans">
+<div class="plan">
+  <p class="k">Enroll</p><p class="t">Free 14-Day Trial</p>
+  <p class="tm">Monthly</p><p class="was">$30.00</p><p class="pr">$14.00</p>
+  <a class="btn cta" href="https://aphrodacademy.com/aphro-d-academy-monthly">Join Aphro-D Academy</a>
+</div>
+<div class="plan">
+  <p class="k">Enroll</p><p class="t">Free 14-Day Trial</p>
+  <p class="tm">Yearly</p><p class="was">$140.00</p><p class="pr">$100.00</p>
+  <a class="btn cta" href="https://aphrodacademy.com/aphro-d-academy-yearly">Join Aphro-D Academy</a>
+</div>
+<div class="plan">
+  <p class="k">Enroll</p><p class="t">Free 14-Day Trial</p>
+  <p class="tm">Lifetime</p><p class="was">$1000.00</p><p class="pr">$600.00</p>
+  <a class="btn cta" href="https://aphrodacademy.com/aphro-d-academy-lifetime">Join Aphro-D Academy</a>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="title">FAQ</h2>
+    <div class="faq">
+<details><summary>Is there a free trial?</summary><p>Yes, you can experience the entire Aphro-D Academy platform free for the first 14 days.</p></details>
+<details><summary>What happens after that?</summary><p>If you want to continue you&#x27;ll be charged $14 a month, $100 a year, or $600 for lifetime access depending on your selection.</p></details>
+<details><summary>How do I cancel the subscription?</summary><p>You can cancel your subscription inside the portal, or by emailing our support team.</p></details>
+<details><summary>Is there a money-back guarantee?</summary><p>Along with the free trial, we also offer a 60-day money-back guarantee. Our platform is designed with care and attention to ensure that you get the most out of your learning experience. If for any reason you feel it&#x27;s not the right fit, rest assured that you&#x27;ll get your money back.</p></details>
+<details><summary>Why not just put the videos on YouTube?</summary><p>We tried that in the past, but many of our videos were taken down and the reach was suppressed. Due to the strict censorship on the YouTube platform, we moved all our content to our own platform, so we can share it unfiltered and without the risk of the channel being shut down.</p></details>
+<details><summary>Do I get support, or is it just video content?</summary><p>You get support. That was another reason we moved to our own platform, so we could help our members better and provide more support so they get results faster. Inside the platform you&#x27;ll be able to ask any questions you like, without restrictions.</p></details>
+<details><summary>Is there a mobile app?</summary><p>The Aphro-D Academy app can be installed on your phone by pressing &#x27;share&#x27;, then &#x27;add to home screen&#x27; using your mobile browser.</p></details>
+<details><summary>Can I access Aphro-D Academy from anywhere in the world?</summary><p>Yes, you can access it anywhere in the world, from mobile or desktop.</p></details>
+<details><summary>Is there an online community as well?</summary><p>Yes. You can connect with other members, share your wins, and get inspired by others&#x27; success.</p></details>
+<details><summary>How do I get started?</summary><p>Scroll up to the pricing section and start your free trial with the plan you want.</p></details>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer class="footer">
+  <div class="frow">
+    <div class="fbrand">
+      <a href="https://www.facebook.com/groups/aphrodacademy"><img class="s" src="assets/images/social/facebook-52.png" alt="Facebook" width="20" height="20"></a>
+      <a href="https://www.instagram.com/aphrodhealth/?hl=en"><img class="s" src="assets/images/social/instagram-52.png" alt="Instagram" width="20" height="20"></a>
+      <img src="assets/images/social/google-reviews-158x54.png" alt="Google reviews" width="72" height="25">
+      <img src="assets/images/social/trustpilot-92x25.png" alt="Trustpilot" width="92" height="25">
+    </div>
+    <p class="fcopy">&copy; 2026 Aphro-D LLC. All rights reserved.</p>
+    <a class="fmem" href="https://aphro-dacademy.com/members/">Members Access</a>
+    <a class="flink" href="https://aphro-dacademy.com/disclaimer-disclosures/">Disclaimer &amp; Disclosures</a>
+    <a class="flink" href="https://aphro-dacademy.com/terms-of-service/">Terms of Services</a>
+    <a class="flink" href="https://aphro-dacademy.com/privacy-policy/">Privacy Policy</a>
+    <a class="flink" href="https://aphro-dacademy.com/support">Support</a>
+  </div>
+</footer>
+
+</body>
+</html>
