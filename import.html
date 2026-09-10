@@ -42,14 +42,14 @@ h1,h2,h3{margin:0;font-weight:400}
 .benefit img{width:108px;height:108px;margin:0 auto 20px}
 .benefit span{font-weight:700;font-size:15px;line-height:21px}
 
-.cmp-scroll{overflow-x:auto;margin-top:56px}
-table.cmp{width:100%;min-width:1040px;border-collapse:collapse;text-align:center;table-layout:fixed}
-table.cmp th.lab{width:380px;text-align:left;font-weight:400;font-size:14px;padding:14px 16px 14px 0;
+.cmp-scroll{margin-top:56px}
+table.cmp{width:100%;border-collapse:collapse;text-align:center;table-layout:fixed}
+table.cmp th.lab{width:36%;text-align:left;font-weight:400;font-size:14px;padding:14px 16px 14px 0;
  border-bottom:1px solid #2a2a2a;color:#ffffff}
-table.cmp th.col{width:165px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+table.cmp th.col{width:16%;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
  font-weight:400;padding:20px 12px;vertical-align:bottom;color:#ffffff}
 table.cmp th.hi,table.cmp td.hi{background:#12330d}
-table.cmp td{width:165px;padding:10px 12px}
+table.cmp td{width:16%;padding:10px 12px}
 .pill{display:block;max-width:118px;height:30px;margin:0 auto;border-radius:6px;
  background-color:#f2fbf3;text-align:center;line-height:30px;font-size:18px;font-weight:700}
 .pill.y{color:#4eb641}
@@ -105,6 +105,10 @@ table.cmp td{width:165px;padding:10px 12px}
  border:1px solid #ff9900;border-radius:5px}
 .flink{font-size:16px;text-decoration:none;color:#a3a3a3;white-space:nowrap}
 
+@media (max-width:700px){
+ .cmp-scroll{overflow-x:auto}
+ table.cmp{min-width:640px}
+}
 @media (max-width:1100px){
  .split .txt{position:static;width:auto;max-width:none}
  .split .media{width:100%!important;margin-left:0!important;margin-top:24px}

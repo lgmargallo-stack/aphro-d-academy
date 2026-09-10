@@ -208,10 +208,15 @@
   
   /* ========================== COMPARISON ========================= */
   
-  .compare__scroll { overflow-x: auto; }
-  .compare { width: 100%; min-width: 1040px; border-collapse: collapse; text-align: center; table-layout: fixed; }
-  .compare thead td:first-child, .compare tbody th { width: 380px; }
-  .compare thead th:not(:first-child), .compare tbody td { width: 165px; }
+  .compare__scroll { }
+  .compare { width: 100%; border-collapse: collapse; text-align: center; table-layout: fixed; }
+  .compare thead td:first-child, .compare tbody th { width: 36%; }
+  .compare thead th:not(:first-child), .compare tbody td { width: 16%; }
+  
+  @media (max-width: 700px) {
+    .compare__scroll { overflow-x: auto; }
+    .compare { min-width: 640px; }
+  }
   
   .compare thead th {
     font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
