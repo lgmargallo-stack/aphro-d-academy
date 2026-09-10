@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden;max-width:100%}
 body{margin:0;background-color:#000000;
  background-image:url("assets/images/backgrounds/TOP-3.png");
  background-position:top center;background-size:100% auto;background-repeat:no-repeat;
@@ -31,13 +32,14 @@ h1,h2,h3{margin:0;font-weight:400}
 .hero h1{font-size:50px;line-height:70px;letter-spacing:14px;font-weight:700;text-transform:uppercase}
 .hero .sub{font-weight:700;font-size:18px;margin-top:8px}
 .hero .tag{color:#a3a3a3;margin-top:6px}
-.hero .media{margin-top:40px;height:594px;background:#151515;border-radius:8px}
+.hero .media{margin-top:40px;height:0;padding-bottom:56.25%;background:#151515;border-radius:8px}
 .hero .kicker{color:#ff9900;font-size:20px;letter-spacing:6px;text-transform:uppercase;margin-top:48px}
 .hero .copy{color:#a3a3a3;max-width:520px;margin:12px auto 0}
 .hero .cta{margin-top:32px}
 
 .benefits{display:flex;flex-wrap:wrap;justify-content:center;gap:37px;margin-top:56px}
-.benefit{width:282px;min-height:250px;border-radius:12px;padding:32px 20px 28px;text-align:center;
+.benefit{width:calc((100% - 74px)/3);max-width:282px;min-height:250px;border-radius:12px;
+ padding:32px 20px 28px;text-align:center;
  background-image:linear-gradient(145deg,#3a3532 0%,#1a1a1a 100%)}
 .benefit img{width:108px;height:108px;margin:0 auto 20px}
 .benefit span{font-weight:700;font-size:15px;line-height:21px}
@@ -62,7 +64,7 @@ table.cmp td{width:16%;padding:10px 12px}
 .split .txt p{color:#a3a3a3;margin-top:20px}
 
 .courses{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:56px}
-.courses img{width:379px;height:213px;border-radius:4px}
+.courses img{width:calc((100% - 22px)/3);height:auto;border-radius:4px}
 
 .band-lower{background-image:url("assets/images/backgrounds/2-51.png");
  background-position:top center;background-size:100% auto;background-repeat:no-repeat}
@@ -75,7 +77,7 @@ table.cmp td{width:16%;padding:10px 12px}
 .quote .tx{font-size:18px;line-height:25.2px;letter-spacing:.7px;max-width:720px;margin:0 auto}
 
 .plans{display:flex;flex-wrap:wrap;justify-content:center;gap:19px;margin-top:56px}
-.plan{width:403px;min-height:493px;background:#151515;border:1px solid #ff9900;
+.plan{width:calc((100% - 38px)/3);max-width:403px;min-width:300px;min-height:493px;background:#151515;border:1px solid #ff9900;
  border-radius:8px;padding:50px 24px 0;text-align:center}
 .plan .k{color:#ff9900;font-size:20px;letter-spacing:6px;line-height:36px;text-transform:uppercase}
 .plan .t{font-size:36px;line-height:35px;margin-top:12px}
@@ -105,17 +107,58 @@ table.cmp td{width:16%;padding:10px 12px}
  border:1px solid #ff9900;border-radius:5px}
 .flink{font-size:16px;text-decoration:none;color:#a3a3a3;white-space:nowrap}
 
-@media (max-width:700px){
- .cmp-scroll{overflow-x:auto}
- table.cmp{min-width:640px}
+@media (max-width:1200px){
+ .title{font-size:34px;line-height:44px;letter-spacing:5px}
+ .title-sm{font-size:32px}
 }
 @media (max-width:1100px){
- .split .txt{position:static;width:auto;max-width:none}
- .split .media{width:100%!important;margin-left:0!important;margin-top:24px}
- .hero h1{font-size:32px;line-height:44px;letter-spacing:6px}
- .hero .media{height:240px}
- .btn-lg{min-width:0;width:100%}
- .frow{justify-content:center;text-align:center}
+ .split{margin-bottom:56px}
+ .split .txt{position:static;width:auto;max-width:none;left:auto!important;top:auto!important;
+  padding:0 24px;margin-bottom:24px}
+ .split .media{width:100%!important;margin-left:0!important}
+ .split .txt h3{font-size:28px;line-height:36px}
+ .hero h1{font-size:36px;line-height:48px;letter-spacing:8px}
+ .btn-lg{min-width:0;width:100%;max-width:443px}
+}
+@media (max-width:900px){
+ .section{padding-top:90px;padding-bottom:90px}
+ .title{font-size:28px;line-height:38px;letter-spacing:4px}
+ .title-sm{font-size:26px}
+ .benefit{width:calc((100% - 37px)/2)}
+ .courses img{width:calc((100% - 11px)/2)}
+ .plan{width:100%;max-width:403px;min-height:0;padding-bottom:40px}
+ .quote .tx,.quote .nm{font-size:16px;line-height:23px}
+ .faq summary{font-size:17px;line-height:30px}
+ .frow{justify-content:center;text-align:center;gap:20px}
+}
+@media (max-width:700px){
+ .cmp-scroll{overflow-x:visible}
+ table.cmp{min-width:0}
+ table.cmp th.lab{width:34%;font-size:12px;line-height:16px;padding:10px 8px 10px 0}
+ table.cmp th.col{width:16.5%;font-size:9px;letter-spacing:.5px;line-height:12px;padding:12px 2px}
+ table.cmp td{width:16.5%;padding:6px 2px}
+ .pill{max-width:100%;height:24px;line-height:24px;font-size:14px;border-radius:4px}
+ .hero{padding:56px 0}
+ .hero h1{font-size:26px;line-height:36px;letter-spacing:5px}
+ .hero .sub{font-size:16px}
+ .hero .kicker{font-size:16px;letter-spacing:4px;margin-top:32px}
+ .split .txt h3{font-size:24px;line-height:32px;letter-spacing:3px}
+ .plan .t{font-size:30px}
+ .plan .pr{font-size:38px}
+ .plan .tm,.plan .k{font-size:17px;letter-spacing:4px}
+}
+@media (max-width:560px){
+ .section{padding-top:64px;padding-bottom:64px}
+ .benefit{width:100%;max-width:340px;min-height:0}
+ .courses img{width:100%}
+ .title{font-size:24px;line-height:32px;letter-spacing:3px}
+ .btn{font-size:16px;letter-spacing:1px;padding:18px 20px}
+ .plan .cta{width:100%}
+ .flink,.fcopy{font-size:14px}
+ table.cmp th.lab{font-size:11px;line-height:15px}
+ table.cmp th.col{font-size:8px;letter-spacing:0;padding:10px 1px}
+ table.cmp td{padding:5px 1px}
+ .pill{height:22px;line-height:22px;font-size:13px}
 }
 </style>
 </head>
@@ -176,7 +219,7 @@ table.cmp td{width:16%;padding:10px 12px}
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap" style="max-width:1255px">
     <h2 class="title title-sm">Explore Our Library of<br>World-Class Courses</h2>
     <div class="courses">
 <img src="assets/images/courses/01-six-pack-shortcuts.png" alt="Six-Pack Shortcuts" width="379" height="213">
